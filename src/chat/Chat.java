@@ -31,7 +31,7 @@ public class Chat {
             
             byte[] data = sentence.getBytes();
             
-            DatagramPacket sendPacket = new DatagramPacket(data, data.length, IPAddress, 9876);
+            DatagramPacket sendPacket = new DatagramPacket(data, data.length, IPAddress, 2000);
             
             socket.send(sendPacket);
             
