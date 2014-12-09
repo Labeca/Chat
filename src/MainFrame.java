@@ -40,8 +40,9 @@ public class MainFrame extends javax.swing.JFrame {
         TextFieldSend = new javax.swing.JTextField();
         BtnSend = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        TextAreaReceiver = new javax.swing.JTextArea();
-
+        TextAreaReceiver = new ReceiverTextArea();
+        
+        Thread t = new Thread(TextAreaReceiver);
         jRadioButton1.setText("jRadioButton1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -134,7 +135,8 @@ public class MainFrame extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-
+        
+        t.start();
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -211,7 +213,7 @@ public class MainFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnSend;
     private javax.swing.JButton BtnUpdate;
-    private javax.swing.JTextArea TextAreaReceiver;
+    private ReceiverTextArea TextAreaReceiver;
     private javax.swing.JTextField TextFieldIP;
     private javax.swing.JTextField TextFieldSend;
     private javax.swing.JLabel jLabel1;
