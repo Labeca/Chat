@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package chat;
+//package chat;
 
 import java.io.IOException;
 import java.net.DatagramPacket;
@@ -49,8 +49,6 @@ public class Chat {
         } catch (IOException ex) {
             Logger.getLogger(Chat.class.getName()).log(Level.SEVERE, null, ex);
         }
-	
-            
-	
+		
     }
 }
