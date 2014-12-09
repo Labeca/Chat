@@ -19,7 +19,7 @@ public class ReceiverTextArea extends JTextArea implements Runnable {
         DatagramSocket socket;
         try{
             socket = new DatagramSocket(2000);
-            byte[] incomingData = new byte[1024];
+            byte[] incomingData = new byte[16385];
             while (true) {
                 DatagramPacket incomingPacket = new DatagramPacket(incomingData, incomingData.length);
                 socket.receive(incomingPacket);

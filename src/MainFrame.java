@@ -162,6 +162,7 @@ public class MainFrame extends javax.swing.JFrame {
             InetAddress IPAddress = InetAddress.getByName(this.ipaddress);
 
             String sentence = this.TextFieldSend.getText();
+            this.TextAreaReceiver.setText(this.TextAreaReceiver.getText() + "\nYou: " + sentence);
             byte[] data = sentence.getBytes();
 
             DatagramPacket sendPacket = new DatagramPacket(data, data.length, IPAddress, 2000);
